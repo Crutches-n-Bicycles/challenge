@@ -42,10 +42,29 @@
             nav {
                 .my-nave {
                     ul {
+                        display: flex;
                         width: 100%;
 
                         li {
                             a {
+                                transition: color 0.3s;
+                                position: relative;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    height: 4px;
+                                    width: 100%;
+                                    background-color: $blue;
+                                    visibility: hidden;
+                                    text-align: center;
+                                }
+
+                                &:hover::before {
+                                    visibility: visible;
+                                }
+
 
                                 span {
                                     @include nav;
@@ -55,8 +74,19 @@
                     }
                 }
             }
-        }
 
+            .icon {
+                a {
+                    img {
+                        transition: transform 0.4s;
+
+                        &:hover {
+                            transform: rotate(360deg) scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
 
         .creatives {
             height: 100%;
@@ -76,14 +106,17 @@
                 margin-bottom: 10px;
             }
 
-            
-
             .cir {
                 width: 60px;
                 height: 60px;
                 border: 1px $wh solid;
                 border-radius: 50%;
                 margin: 0 auto;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                &:hover{
+                    background-color: $blue;
+                }
 
 
 
@@ -100,9 +133,9 @@
     min-height: 738px;
 
     .container {
-        
+
         .agency_cont_1 {
- 
+
             .agency_h2 {
                 margin-top: 172px;
                 margin-bottom: 144px;
@@ -128,6 +161,7 @@
         .agency_cont_2 {
             .agency_item {
                 margin-bottom: 128px;
+
                 .circle {
                     width: 131px;
                     height: 131px;
@@ -179,24 +213,25 @@
 
 .acita {
     background-color: $dark-grey;
-    height: 100%;
-    min-height: 300px;
+    height: 27.7vw;
     position: relative;
 
     .container {
-        height: 500px;
-
+        height: 100%;
 
         .acita_cont_1 {
-            height: 100%;
 
             .acita_item_1 {
                 height: 100%;
 
-                span {}
+                span {
+                    @include text;
+                    font-size: 13px;
+                }
 
                 h4 {
                     @include h4;
+                    margin-bottom: 43px;
                 }
 
                 p {
@@ -206,15 +241,63 @@
 
                 .acita_p {
                     margin-bottom: 30px;
-                    height: 100%;
                 }
             }
 
             .acita_item_2 {
+
                 position: absolute;
                 right: 0;
                 padding-right: 0;
 
+            }
+        }
+    }
+}
+
+.asita_2 {
+    background-color: #f2f2f2;
+    position: relative;
+    height: 900px;
+
+    .container-fluid {
+        .acita_cont_2 {
+
+            .acita_item_3 {
+                height: 100%;
+                padding: 105px 0 0 83px;
+
+                span {
+                    @include text;
+                    font-size: 13px;
+
+                }
+
+                h4 {
+                    @include h4;
+                    margin-bottom: 43px;
+                    color: $bl;
+                }
+
+                p {
+                    @include text;
+                    color: $wh;
+                    color: $bl;
+                }
+
+                .acita_p {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .acita_item_4 {
+                padding: 0;
+
+                img {
+
+                    width: 102%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -276,7 +359,7 @@
 
     .container {
 
-        .row {
+        .row {  
             .cum_cont {
                 margin-top: 120px;
 
@@ -368,31 +451,33 @@
     }
 
     .team_cont_2 {
-        height: 450px;
         margin-bottom: 124px;
 
         .team_inner_2 {
             background-repeat: no-repeat;
-            position: relative;
+            width: 300px;
+            height: 450px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
 
             .over {
-                position: absolute;
-                bottom: -5%;
-                display: flex;
+                transform: translateY(-6px);
+                width: 180px;
+                height: 80px;
                 background-color: $wh;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 80%;
                 justify-content: center;
-                height: 117px;
 
-                .name {
+                .name{
                     @include team;
                 }
 
-                .job {
+                .jub{
                     @include text;
-                    font-weight: 600;
                 }
             }
         }
@@ -513,4 +598,279 @@
     }
 }
 
-@media ()
+@media (max-width: 1199px) {
+    .header {
+        .header_cont {
+            .header_inner {
+                .logo {
+                    display: none;
+                }
+
+                * {
+                    font-size: 19px !important;
+                }
+            }
+        }
+    }
+
+    .team {
+        .team_cont_2 {
+            .team_inner_2 {
+                background-position: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        .header_cont {
+            .header_inner {
+                padding-top: 20px;
+                align-items: flex-start;
+
+                nav {
+                    .my-nave {
+                        ul {
+                            li {
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+
+                .icon {
+                    padding-top: 15px;
+                }
+
+                nav {
+                    button {
+                        transform: scale(1.2);
+                        background: rgb(107, 107, 107);
+
+                        .my-nave {}
+
+                        span {}
+                    }
+                }
+            }
+
+            .creatives {
+                h1 {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+
+    .agency {
+        .container {
+            .agency_cont_2 {
+                .agency_item {
+                    padding: 0 20px;
+                }
+
+                .agens_1,
+                .agens_2 {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .form {
+        .container {
+            .form_cont_1 {
+                .form_inner_1 {
+                    span {
+                        top: -33%;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog {
+        .container {
+            .blog_cont_2 {
+
+                .blog_item_1,
+                .blog_item_2 {
+                    margin-bottom: 50px;
+
+                }
+
+
+            }
+        }
+    }
+
+    .cum {
+        .container {
+            .row {
+
+                .cum_item_2,
+                .cum_item_1 {
+                    margin: 60px 0 50px 0;
+                }
+            }
+        }
+    }
+
+    .phone {
+        .container {
+            .row {
+                .phone_cont_1 {
+                    margin: 50px 0;
+                }
+
+                .phone_cont_2 {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        .header_cont {
+            .creatives {
+                h1 {
+                    font-size: 80px;
+                }
+
+                .power {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .agency {
+        .container {
+            .agency_cont_1 {
+                .agency_h2 {
+                    span {
+                        bottom: -50%;
+                    }
+                }
+            }
+
+            .agency_cont_2 {
+                .agency_item {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 713px) {
+
+    .header {
+        .header_cont {
+            .header_inner {
+                .logo {
+                    left: 7%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+
+
+    .header {
+        .header_cont {
+            .creatives {
+                h1 {
+                    font-size: 50px;
+                }
+
+                .power {
+                    font-size: 16px;
+                    line-height: 35px;
+                    letter-spacing: 9px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .container {
+            .footer_inner {
+                text-align: center;
+                display: block !important;
+                margin-bottom: 10px;
+            }
+
+            .footer_inner_1 {
+                text-align: center;
+            }
+        }
+    }
+
+    .team {
+        .container {
+            .team_cont_1 {
+                .team_inner_1 {
+                    p {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .phone {
+        .container {
+            .row {
+                .phone_cont_1 {
+                    .blue_1 {
+                        width: 220px;
+                    }
+
+                    .blue_2 {
+                        width: 250px;
+                    }
+
+                    .blue_3 {
+                        width: 270px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cum {
+        .container {
+            .row {
+                .cum_cont {
+                    img {
+                        align-self: center;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 434px) {
+    .agency {
+        .container {
+            .agency_cont_1 {
+                .agency_h2 {
+
+
+                    span {
+                        bottom: -25%;
+                    }
+                }
+            }
+        }
+    }
+}
