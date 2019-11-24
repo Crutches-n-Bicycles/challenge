@@ -324,104 +324,48 @@
 
 .acita {
   background-color: #222222;
-  height: 27.7vw;
+  height: 100%;
+  min-height: 300px;
   position: relative;
 }
 
-.acita .container {
-  height: 100%;
-}
-
-.acita .container .acita_cont_1 .acita_item_1 {
-  height: 100%;
-}
-
-.acita .container .acita_cont_1 .acita_item_1 span {
+.acita .container .acita_inner .row span {
   font-family: "Gotham";
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  font-size: 13px;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.acita .container .acita_cont_1 .acita_item_1 h4 {
-  color: #fff;
-  font-family: Gotham;
-  font-size: 25px;
+.acita .container .acita_inner .row h5 {
+  font-family: "Gotham";
+  font-size: 18px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 30px;
   text-transform: uppercase;
-  margin-bottom: 43px;
-}
-
-.acita .container .acita_cont_1 .acita_item_1 p {
-  font-family: "Gotham";
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
   color: #fff;
-}
-
-.acita .container .acita_cont_1 .acita_item_1 .acita_p {
   margin-bottom: 30px;
 }
 
-.acita .container .acita_cont_1 .acita_item_2 {
+.acita .container .acita_inner .row p {
+  font-family: "Gotham";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.acita_cont_2 {
   position: absolute;
   right: 0;
-  padding-right: 0;
-}
-
-.asita_2 {
-  background-color: #f2f2f2;
-  position: relative;
-  height: 900px;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_3 {
-  height: 100%;
-  padding: 105px 0 0 83px;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_3 span {
-  font-family: "Gotham";
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-  font-size: 13px;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_3 h4 {
-  color: #fff;
-  font-family: Gotham;
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 36px;
-  text-transform: uppercase;
-  margin-bottom: 43px;
-  color: #000;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_3 p {
-  font-family: "Gotham";
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #fff;
-  color: #000;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_3 .acita_p {
-  margin-bottom: 30px;
-}
-
-.asita_2 .container-fluid .acita_cont_2 .acita_item_4 {
+  top: 0;
   padding: 0;
 }
 
-.asita_2 .container-fluid .acita_cont_2 .acita_item_4 img {
-  width: 102%;
-  height: 100%;
+.acita_cont_2 .row .acita_inner_2 {
+  height: 600px;
+  background-image: url(../img/main_1.png);
 }
 
 .blog .container .blog_cont_1 .blog_inner_1 {
