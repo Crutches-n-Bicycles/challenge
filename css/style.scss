@@ -55,7 +55,7 @@
                                     position: absolute;
                                     bottom: 0;
                                     height: 4px;
-                                    width: 100%;
+                                    width: 87%;
                                     background-color: $blue;
                                     visibility: hidden;
                                     text-align: center;
@@ -212,56 +212,10 @@
 }
 
 
-.acita {
-    background-color: $dark-grey;
-    height: 100%;
-    min-height: 300px;
-    position: relative;
-
-    .container {
-
-        .acita_inner {
-
-            .row {
-                span {
-                    @include text;
-                    color: $wh;
-                    margin-bottom: 10px;
-                }
-
-                h5 {
-                    @include h5;
-                    color: $wh;
-                    margin-bottom: 30px;
-                }
-
-                p {
-                    @include text;
-                    color: $wh;
-                }
-            }
-        }
-
-
-    }
-}
-
-.acita_cont_2 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0;
-
-    .row {
-        .acita_inner_2 {
-            height: 600px;
-            background-image: url(../img/main_1.png);
-        }
-    }
+.slider{
 
 }
-
-.asita_2 {}
+   
 
 .blog {
     .container {
